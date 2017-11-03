@@ -3,8 +3,14 @@
 /**
  * entry point of the calculator
  */
-import validateInput from './validateInput';
+
+import handleName from './handleName';
+import { validateName } from './validator';
 
 function calculatePayslip(input: Input): PayslipCalculationResult {
-  const validationResult = validateInput(input);
+  const name = handleName(
+    input.firstName,
+    input.lastName,
+    validateName
+  );
 }

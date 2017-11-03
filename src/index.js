@@ -16,9 +16,11 @@ import './index.css';
 
 const render = (Comp) => {
   const root = document.getElementById('root');
-  //FIXME: ReactDOM.render accept an Element while `root` is HTMLElement
-  // this probably is an editor bug.
-  // Should do no harm, but need to be fixed
+
+  if (root === null)
+    throw new Error(
+      'root element not exist, please check html template for #root'
+    );
   ReactDOM.render(<Comp />, root);
 };
 
