@@ -9,7 +9,7 @@ describe('handleName', () => {
 
     const alwaysValid = () => ({ isInvalid: false });
 
-    const result = perform(alwaysValid, getResponse);
+    const result = perform(alwaysValid, getResponse)();
 
     expect(result.isInvalid).toBe(false);
     expect(result.value).toBe(response);
@@ -26,7 +26,7 @@ describe('handleName', () => {
       reasons: reason
     });
 
-    const result = perform(alwaysInvalid, getResponse, {
+    const result = perform(alwaysInvalid, getResponse)({
       foo: 'bar'
     });
     expect(result.isInvalid).toBe(true);

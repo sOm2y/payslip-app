@@ -26,6 +26,10 @@ declare type PayslipCalculationResult = {
 };
 
 declare type ValidationResult =
+  | { isInvalid: true, reason: string }
+  | { isInvalid: false };
+
+declare type ValidationResults =
   | {
       isInvalid: true,
       reasons: { [property: string]: string }
