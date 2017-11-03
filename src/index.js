@@ -1,5 +1,11 @@
 //@flow
 
+/**
+ * 
+ * the app startup. do all kind of registration/settings/global stuff here.
+ * 
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -8,6 +14,9 @@ import registerServiceWorker from './registerServiceWorker';
 
 const render = (Comp) => {
   const root = document.getElementById('root');
+  //FIXME: ReactDOM.render accept an Element while `root` is HTMLElement
+  // this probably is an editor bug.
+  // Should do no harm, but need to be fixed
   ReactDOM.render(<Comp />, root);
 };
 
