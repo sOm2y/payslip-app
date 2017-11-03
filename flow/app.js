@@ -1,9 +1,12 @@
 //@flow
 /* eslint no-undef: 0 */ // --> this should be an eslint error
 
-declare type Input = {
-  firstName: string,
-  lastName: string,
+type NameInput = {
+  firstname: string,
+  lastname: string
+};
+
+declare type Input = NameInput & {
   annualSalary: number,
   superRate: number,
   paymentStartDate: Date
@@ -25,7 +28,7 @@ declare type PayslipCalculationResult = {
 declare type ValidationResult =
   | {
       isInvalid: true,
-      reason: string
+      reasons: { [property: string]: string }
     }
   | {
       isInvalid: false
@@ -38,5 +41,5 @@ declare type Result<T> =
     }
   | {
       isInvalid: true,
-      reasons: Array<string>
+      reasons: { [property: string]: string }
     };
