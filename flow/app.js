@@ -22,7 +22,7 @@ declare type PayslipCalculationResult = {
   }
 };
 
-declare type InputValidationResult = {
+declare type ValidationResult = {
   isValid: boolean,
-  reason: string
+  reason: string | undefined
 };
