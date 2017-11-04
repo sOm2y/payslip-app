@@ -1,16 +1,20 @@
 //@flow
 /* eslint no-undef: 0 */ // --> this should be an eslint error
 
-type NameInput = {
+declare type NameInput = {
   firstname: string,
   lastname: string
 };
 
-declare type Input = NameInput & {
-  annualSalary: number,
-  superRate: number,
-  paymentStartDate: Date
+declare type AnnualSalaryInput = {
+  annualSalary: number
 };
+
+declare type Input = NameInput &
+  AnnualSalaryInput & {
+    superRate: number,
+    paymentStartDate: Date
+  };
 
 declare type PayslipCalculationResult = {
   isError: boolean,

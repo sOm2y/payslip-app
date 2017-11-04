@@ -1,15 +1,13 @@
 //@flow
 
-type Validator = any => ValidationResult;
-
 function performValidation(
-  validator: Validator,
+  validate: any => ValidationResult,
   input: { [key: string]: any }
 ): ValidationResults {
   const errors = {};
 
   Object.keys(input).forEach((key) => {
-    const result = validator(input[key]);
+    const result = validate(input[key]);
     if (result.isInvalid) {
       errors[key] = result.reason;
     }
