@@ -5,79 +5,86 @@
  */
 
 import validateName from './validators/validateName';
-import concatName from './actions/concatName';
 import validateAnnualSalary from './validators/validateAnnualSalary';
-import divideAnnualSalaryBy12AndRound from './actions/divideAnnualSalaryBy12AndRound';
+import validateSuperRate from './validators/validateSuperRate';
+
 import { incrementAfter50Rounding } from './actions/performRounding';
+
+import concatName from './actions/concatName';
+import divideAnnualSalaryBy12AndRound from './actions/divideAnnualSalaryBy12AndRound';
 import calculateIncomeTax from './actions/calculateIncomeTax';
 import calculateSuper from './actions/calculateSuper';
-import validateSuperRate from './validators/validateSuperRate';
 import calculateNetIncome from './actions/calculateNetIncome';
-import { default as perform } from './core/validateAndDo';
+
+function validateInput(input: Input): ValidationResults {
+  const noError = {};
+  let errors = noError;
+  [
+    validateName({
+      firstname: input.firstname,
+      lastname: input.lastname
+    }),
+    validateAnnualSalary({ annualSalary: input.annualSalary }),
+    validateSuperRate({ superRate: input.superRate })
+  ]
+    .filter((result) => result.isInvalid)
+    .forEach((result) => {
+      errors = { ...errors, ...result.reasons };
+    });
+
+  return errors === noError ? { isInvalid: false } : { isInvalid: true, reasons: errors };
+}
 
 function calculatePayslip(input: Input): PayslipCalculationResult {
-  // singleton annual salary validaton
-  const annualSalaryValidationResult = validateAnnualSalary({
-    annualSalary: input.annualSalary
-  });
+  const inputValidation = validateInput(input);
+  if (inputValidation.isInvalid) return inputValidation;
 
-  if (annualSalaryValidationResult.isInvalid) {
-    return annualSalaryValidationResult;
-  }
+  // const annualSalaryValidationResult = validateAnnualSalary({
+  //   annualSalary: input.annualSalary
+  // });
+
+  // if (annualSalaryValidationResult.isInvalid) {
+  //   return annualSalaryValidationResult;
+  // }
   // gross income
-  const grossIncome = perform(
-    () => annualSalaryValidationResult,
-    divideAnnualSalaryBy12AndRound(incrementAfter50Rounding)
-  )({
+  const grossIncome = divideAnnualSalaryBy12AndRound(incrementAfter50Rounding)({
     annualSalary: input.annualSalary
   });
-
-  if (grossIncome.isInvalid) return grossIncome;
 
   // super
-  const superAmount = perform(
-    validateSuperRate,
-    calculateSuper(incrementAfter50Rounding)
-  )({
+  const superAmount = calculateSuper(incrementAfter50Rounding)({
     superRate: input.superRate,
-    grossIncome: grossIncome.value
+    grossIncome
   });
 
-  if (superAmount.isInvalid) return superAmount;
-
   // income tax
-  const incomeTax = perform(
-    () => annualSalaryValidationResult,
-    calculateIncomeTax(incrementAfter50Rounding)
-  )({
+  const incomeTax = calculateIncomeTax(incrementAfter50Rounding)({
     annualSalary: incrementAfter50Rounding(input.annualSalary)
   });
 
-  if (incomeTax.isInvalid) return incomeTax;
-
   // name
-  const name = perform(validateName, concatName)({
+  const name = concatName({
     firstname: input.firstname,
     lastname: input.lastname
   });
 
-  if (name.isInvalid) return name;
-
   // TODO: pay period
 
   const netIncome = calculateNetIncome({
-    grossIncome: grossIncome.value,
-    incomeTax: incomeTax.value
+    grossIncome,
+    incomeTax
   });
 
   return {
     isInvalid: false,
     value: {
-      name: name.value,
-      super: superAmount.value,
-      grossIncome: grossIncome.value,
-      incomeTax: incomeTax.value,
+      name: name,
+      super: superAmount,
+      grossIncome: grossIncome,
+      incomeTax: incomeTax,
       netIncome
     }
   };
 }
+
+export default calculatePayslip;
