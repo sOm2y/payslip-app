@@ -4,19 +4,17 @@
  * it should be always positive
  */
 import performValidate from './core/performValidate';
-import { SHOULD_POSITIVE } from './validateGrossIncome.message';
+import { SHOULD_POSITIVE } from './validateAnnualSalary.message';
 
 export function shouldAlwaysPositive(
   input: number
 ): ValidationResult {
-  if (input <= 0) {
-    return {
+  return input <= 0
+    ? {
       isInvalid: true,
       reason: SHOULD_POSITIVE
-    };
-  }
-
-  return { isInvalid: false };
+    }
+    : { isInvalid: false };
 }
 
 export default (input: AnnualSalaryInput) =>

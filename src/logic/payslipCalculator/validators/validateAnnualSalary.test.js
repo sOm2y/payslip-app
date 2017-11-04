@@ -1,7 +1,7 @@
 //@flow
 
-import { shouldAlwaysPositive as validateGrossIncome } from './validateGrossIncome';
-import { SHOULD_POSITIVE } from './validateGrossIncome.message';
+import { shouldAlwaysPositive as validateGrossIncome } from './validateAnnualSalary';
+import { SHOULD_POSITIVE } from './validateAnnualSalary.message';
 
 describe('validateGrossIncome', () => {
   it('should return falsely when input is negative', () => {
