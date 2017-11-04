@@ -15,7 +15,7 @@ describe('handleName', () => {
     expect(result.value).toBe(response);
   });
 
-  it('should response inValid result', () => {
+  it('should response invalid result', () => {
     const response = {};
     const getResponse = () => response;
 
