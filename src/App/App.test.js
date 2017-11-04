@@ -13,7 +13,7 @@ describe('The application', () => {
     ReactDOM.render(<App />, div);
   });
 
-  it('should renders without crashing even for smoke testing', () => {
+  it('should renders without crashing even for shallow renderer', () => {
     shallow(<App />);
   });
 });

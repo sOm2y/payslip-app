@@ -32,7 +32,7 @@
     "jest": "20.0.4",
     "jest-enzyme": "^4.0.1",
     "jss": "^9.1.0",
-    "material-ui": "^0.19.4",
+    "material-ui": "^1.0.0-beta.19",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -60,10 +60,11 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "flow-bin": "^0.58.0",
-    "@storybook/react": "^3.2.14",
     "@storybook/addon-actions": "^3.2.14",
-    "@storybook/addon-links": "^3.2.14"
+    "@storybook/addon-links": "^3.2.14",
+    "@storybook/react": "^3.2.14",
+    "eslint-plugin-jest": "^21.2.0",
+    "flow-bin": "^0.58.0"
   },
   "jest": {
     "collectCoverageFrom": [

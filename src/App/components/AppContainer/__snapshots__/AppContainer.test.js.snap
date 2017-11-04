@@ -1,7 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppContainer should renders correctly 1`] = `
-<div>
-  hello
+<div
+  className="AppContainer-container-1"
+>
+  <div
+    className="AppContainer-ribbon-2"
+  >
+    <div
+      className="AppContainer-headlineWrapper-4"
+    >
+      <h1
+        className="MuiTypography-root-5 MuiTypography-headline-10 MuiTypography-colorInherit-24"
+      >
+        The Payslip App
+      </h1>
+    </div>
+  </div>
+  <div
+    className="AppContainer-childrenWrapper-3"
+  >
+    hello
+  </div>
 </div>
 `;
