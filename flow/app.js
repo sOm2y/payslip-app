@@ -14,10 +14,10 @@ declare type SuperRateInput = {
   superRate: number
 };
 
-declare type Input = NameInput &
+declare type PayslipInput = NameInput &
   AnnualSalaryInput &
   SuperRateInput & {
-    paymentStartDate: Date
+    paymentStartDate: string
   };
 
 declare type Payslip = {
@@ -31,9 +31,7 @@ declare type Payslip = {
 
 declare type PayslipCalculationResult = Result<Payslip>;
 
-declare type ValidationResult =
-  | { isInvalid: true, reason: string }
-  | { isInvalid: false };
+declare type ValidationResult = { isInvalid: true, reason: string } | { isInvalid: false };
 
 declare type ValidationResults =
   | {

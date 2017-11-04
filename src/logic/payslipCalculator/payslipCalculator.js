@@ -16,7 +16,10 @@ import calculateIncomeTax from './actions/calculateIncomeTax';
 import calculateSuper from './actions/calculateSuper';
 import calculateNetIncome from './actions/calculateNetIncome';
 
-function validateInput(input: Input): ValidationResults {
+/**
+ * Perfom validation on input values
+ */
+function _validateInput(input: Input): ValidationResults {
   const noError = {};
   let errors = noError;
   [
@@ -27,48 +30,38 @@ function validateInput(input: Input): ValidationResults {
     validateAnnualSalary({ annualSalary: input.annualSalary }),
     validateSuperRate({ superRate: input.superRate })
   ]
-    .filter((result) => result.isInvalid)
-    .forEach((result) => {
+    .filter(result => result.isInvalid)
+    .forEach(result => {
       errors = { ...errors, ...result.reasons };
     });
 
   return errors === noError ? { isInvalid: false } : { isInvalid: true, reasons: errors };
 }
 
-function calculatePayslip(input: Input): PayslipCalculationResult {
-  const inputValidation = validateInput(input);
+/**
+ * calculate the payslip
+ */
+function calculatePayslip(input: PayslipInput): PayslipCalculationResult {
+  const inputValidation = _validateInput(input);
   if (inputValidation.isInvalid) return inputValidation;
 
-  // const annualSalaryValidationResult = validateAnnualSalary({
-  //   annualSalary: input.annualSalary
-  // });
-
-  // if (annualSalaryValidationResult.isInvalid) {
-  //   return annualSalaryValidationResult;
-  // }
-  // gross income
   const grossIncome = divideAnnualSalaryBy12AndRound(incrementAfter50Rounding)({
     annualSalary: input.annualSalary
   });
 
-  // super
   const superAmount = calculateSuper(incrementAfter50Rounding)({
     superRate: input.superRate,
     grossIncome
   });
 
-  // income tax
   const incomeTax = calculateIncomeTax(incrementAfter50Rounding)({
     annualSalary: incrementAfter50Rounding(input.annualSalary)
   });
 
-  // name
   const name = concatName({
     firstname: input.firstname,
     lastname: input.lastname
   });
-
-  // TODO: pay period
 
   const netIncome = calculateNetIncome({
     grossIncome,
@@ -78,11 +71,12 @@ function calculatePayslip(input: Input): PayslipCalculationResult {
   return {
     isInvalid: false,
     value: {
-      name: name,
+      name,
       super: superAmount,
-      grossIncome: grossIncome,
-      incomeTax: incomeTax,
-      netIncome
+      grossIncome,
+      incomeTax,
+      netIncome,
+      payPeriod: input.paymentStartDate // FIXME: this assumuption may be wrong!
     }
   };
 }

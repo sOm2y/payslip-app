@@ -66,4 +66,11 @@ describe('calculateIncomeTax', () => {
 
     expect(roundStub).toBeCalledWith(4545.583333333333);
   });
+
+  it('should call round with 4545.620833333333 if salary is 180001', () => {
+    const roundStub = jest.fn();
+    calculateIncomeTax(roundStub)({ annualSalary: 180001 });
+
+    expect(roundStub).toBeCalledWith(4545.620833333333);
+  });
 });
