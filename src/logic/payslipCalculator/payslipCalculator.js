@@ -17,9 +17,19 @@ import calculateSuper from './actions/calculateSuper';
 import calculateNetIncome from './actions/calculateNetIncome';
 
 /**
+ * the entry point
+ */
+function generatePayslip(input: PayslipInput): PayslipCalculationResult {
+  const inputValidation = _validateInput(input);
+  if (inputValidation.isInvalid) return inputValidation;
+
+  return _calculatePayslip(input);
+}
+
+/**
  * Perfom validation on input values
  */
-function _validateInput(input: Input): ValidationResults {
+function _validateInput(input: PayslipInput): ValidationResults {
   const noError = {};
   let errors = noError;
   [
@@ -30,8 +40,8 @@ function _validateInput(input: Input): ValidationResults {
     validateAnnualSalary({ annualSalary: input.annualSalary }),
     validateSuperRate({ superRate: input.superRate })
   ]
-    .filter(result => result.isInvalid)
-    .forEach(result => {
+    .filter((result) => result.isInvalid)
+    .forEach((result) => {
       errors = { ...errors, ...result.reasons };
     });
 
@@ -41,10 +51,7 @@ function _validateInput(input: Input): ValidationResults {
 /**
  * calculate the payslip
  */
-function calculatePayslip(input: PayslipInput): PayslipCalculationResult {
-  const inputValidation = _validateInput(input);
-  if (inputValidation.isInvalid) return inputValidation;
-
+function _calculatePayslip(input: PayslipInput): PayslipCalculationResult {
   const grossIncome = divideAnnualSalaryBy12AndRound(incrementAfter50Rounding)({
     annualSalary: input.annualSalary
   });
@@ -81,4 +88,4 @@ function calculatePayslip(input: PayslipInput): PayslipCalculationResult {
   };
 }
 
-export default calculatePayslip;
+export default generatePayslip;
