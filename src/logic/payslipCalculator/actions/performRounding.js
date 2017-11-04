@@ -8,7 +8,6 @@
 
 import Decimal from 'decimal.js';
 
-// FIXME: em... using decimal.js maybe a bit redunant?
 function incrementAfter50Rounding(input: number): number {
   const value = new Decimal(input);
 

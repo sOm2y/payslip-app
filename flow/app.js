@@ -20,18 +20,16 @@ declare type Input = NameInput &
     paymentStartDate: Date
   };
 
-declare type PayslipCalculationResult = {
-  isError: boolean,
-  reason: string,
-  payslip: {
-    name: string,
-    payPeriod: string,
-    grossIncome: number,
-    incomeTax: number,
-    netIncome: number,
-    super: number
-  }
+declare type Payslip = {
+  name: string,
+  payPeriod: string,
+  grossIncome: number,
+  incomeTax: number,
+  netIncome: number,
+  super: number
 };
+
+declare type PayslipCalculationResult = Result<Payslip>;
 
 declare type ValidationResult =
   | { isInvalid: true, reason: string }
