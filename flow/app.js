@@ -10,9 +10,13 @@ declare type AnnualSalaryInput = {
   annualSalary: number
 };
 
+declare type SuperRateInput = {
+  superRate: number
+};
+
 declare type Input = NameInput &
-  AnnualSalaryInput & {
-    superRate: number,
+  AnnualSalaryInput &
+  SuperRateInput & {
     paymentStartDate: Date
   };
 
