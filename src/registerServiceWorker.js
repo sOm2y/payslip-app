@@ -1,4 +1,4 @@
-/* eslint no-console: 0 */ // --> OFF
+/* eslint no-console: 0 */ // --> there are some console here. is necessary
 
 // In production, we register a service worker to serve assets from local cache.
 

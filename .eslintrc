@@ -1,5 +1,9 @@
 {
   "extends": "react-app",
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true
+  },
   "rules": {
     "padding-line-between-statements": [
       "warn",
