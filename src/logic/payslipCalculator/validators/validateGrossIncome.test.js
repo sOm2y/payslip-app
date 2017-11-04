@@ -1,6 +1,6 @@
 //@flow
 
-import validateGrossIncome from './validateGrossIncome';
+import { shouldAlwaysPositive as validateGrossIncome } from './validateGrossIncome';
 import { SHOULD_POSITIVE } from './validateGrossIncome.message';
 
 describe('validateGrossIncome', () => {

@@ -7,10 +7,10 @@
 
 import Decimal from 'decimal.js';
 
-function incrementAfter50(input: number): number {
+function incrementAfter50Rounding(input: number): number {
   const value = new Decimal(input);
 
   return value.round().toNumber();
 }
 
-export default incrementAfter50;
+export { incrementAfter50Rounding };

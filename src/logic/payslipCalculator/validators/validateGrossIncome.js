@@ -3,10 +3,12 @@
 /**
  * it should be always positive
  */
-
+import performValidate from './core/performValidate';
 import { SHOULD_POSITIVE } from './validateGrossIncome.message';
 
-function shouldAlwaysPositive(input: number): ValidationResult {
+export function shouldAlwaysPositive(
+  input: number
+): ValidationResult {
   if (input <= 0) {
     return {
       isInvalid: true,
@@ -17,4 +19,5 @@ function shouldAlwaysPositive(input: number): ValidationResult {
   return { isInvalid: false };
 }
 
-export default shouldAlwaysPositive;
+export default (input: AnnualSalaryInput) =>
+  performValidate(shouldAlwaysPositive, input);
