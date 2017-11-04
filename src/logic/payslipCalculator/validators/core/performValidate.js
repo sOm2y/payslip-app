@@ -4,16 +4,17 @@ function performValidation(
   validate: any => ValidationResult,
   input: { [key: string]: any }
 ): ValidationResults {
-  const errors = {};
+  const noError = {};
+  let errors = noError;
 
   Object.keys(input).forEach((key) => {
     const result = validate(input[key]);
     if (result.isInvalid) {
-      errors[key] = result.reason;
+      errors = { ...errors, [key]: result.reason };
     }
   });
 
-  return Object.keys(errors).length === 0
+  return errors === noError
     ? {
       isInvalid: false
     }

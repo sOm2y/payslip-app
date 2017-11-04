@@ -17,7 +17,7 @@ describe('performValidate', () => {
     });
   });
 
-  it('should return truly result, when validtion success', () => {
+  it('should return truly result, when validation success', () => {
     const input = { foo: 'bar' };
     const validator = () => ({ isInvalid: false });
 
