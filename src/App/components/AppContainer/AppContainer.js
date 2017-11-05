@@ -26,21 +26,21 @@ const styles = (theme) => ({
   container: {
     height: '100%',
     width: '100%',
-    display: 'flex'
+    display: 'flex',
+    flexDirection: 'column'
   },
   ribbon: {
     height: 200,
     width: '100%',
-    position: 'fixed',
-    zIndex: -1,
     backgroundColor: theme.palette.primary[500]
   },
   childrenWrapper: {
     paddingTop: 48,
-    paddingLeft: 32
+    paddingLeft: 32,
+    marginTop: -172
   },
   headlineWrapper: {
-    padding: [12, 32],
+    padding: [24, 36],
     color: theme.palette.common.white
   }
 });
@@ -54,7 +54,7 @@ class AppContainer extends React.PureComponent<Props> {
         <div className={classes.ribbon}>
           <div className={classes.headlineWrapper}>
             <Typography type="headline" color="inherit">
-              The Payslip App
+              Payslip App
             </Typography>
           </div>
         </div>

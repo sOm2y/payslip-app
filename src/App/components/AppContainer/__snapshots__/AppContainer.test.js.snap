@@ -13,7 +13,7 @@ exports[`AppContainer should renders correctly 1`] = `
       <h1
         className="MuiTypography-root-5 MuiTypography-headline-10 MuiTypography-colorInherit-24"
       >
-        The Payslip App
+        Payslip App
       </h1>
     </div>
   </div>
