@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-shadow2-6 MuiPaper-rounded-3 Container-container-1"
+>
+  <h3
+    className="MuiTypography-root-29 MuiTypography-subheading-36"
+  >
+    Payslip for 
+    <b>
+      John Doe
+    </b>
+  </h3>
+  <hr
+    className="MuiDivider-root-53 MuiDivider-default-54"
+  />
+  <div
+    style={
+      Object {
+        "height": 32,
+        "width": undefined,
+      }
+    }
+  />
+  <div
+    className="MuiGrid-typeContainer-58 MuiGrid-spacing-xs-16-78"
+  >
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-4-85"
+    >
+      <span
+        className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-alignLeft-41"
+      >
+        Pay Period
+      </span>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-8-89"
+    >
+      <p
+        className="MuiTypography-root-29 MuiTypography-body1-38 MuiTypography-alignRight-43"
+      >
+        1st March - 31st March, 2018
+      </p>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-4-85"
+    >
+      <span
+        className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-alignLeft-41"
+      >
+        Gross Income
+      </span>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-8-89"
+    >
+      <p
+        className="MuiTypography-root-29 MuiTypography-body1-38 MuiTypography-alignRight-43"
+      >
+        $ 
+        10000
+      </p>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-4-85"
+    >
+      <span
+        className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-alignLeft-41"
+      >
+        Income Tax
+      </span>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-8-89"
+    >
+      <p
+        className="MuiTypography-root-29 MuiTypography-body1-38 MuiTypography-alignRight-43"
+      >
+        $ 
+        2696
+      </p>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-4-85"
+    >
+      <span
+        className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-alignLeft-41"
+      >
+        Net Income
+      </span>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-8-89"
+    >
+      <p
+        className="MuiTypography-root-29 MuiTypography-body1-38 MuiTypography-alignRight-43"
+      >
+        $ 
+        7304
+      </p>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-4-85"
+    >
+      <span
+        className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-alignLeft-41"
+      >
+        Super
+      </span>
+    </div>
+    <div
+      className="MuiGrid-typeItem-59 MuiGrid-grid-xs-8-89"
+    >
+      <p
+        className="MuiTypography-root-29 MuiTypography-body1-38 MuiTypography-alignRight-43"
+      >
+        $ 
+        1000
+      </p>
+    </div>
+  </div>
+</div>
+`;
