@@ -2,7 +2,9 @@
 
 Hello there, thanks for visiting. please take your time to surf the app here: [Demo](https://klauszhang.github.io/payslip-demo/)
 
-Please not all code writing in **Function Programing** style. Emphasis on **immutability** and **descriptivity**. Most side effects are isolated into its minimal scope and most functions are pure.
+
+> Please note all code are written in **Function Programing** style. Emphasis on **immutability** and **descriptivity**. Most side effects are isolated into its minimal scope and most functions are pure. This benefits the process of development and testing.
+
 
 If you want to see the source code, consider you have got git, please open the terimal/powershell, and type followings:
 ```
