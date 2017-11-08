@@ -30,7 +30,7 @@ esproposal.decorators=ignore
 
 unsafe.enable_getters_and_setters=true
 
-module.name_mapper='^client\/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
+module.name_mapper='^flow-example-material-ui\/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
 
 suppress_type=$FlowFixMe
 suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
