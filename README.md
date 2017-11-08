@@ -37,6 +37,7 @@ or
 yarn test --coverage
 ```
 
+
 How about component view? I knew you would ask
 ```
 npm run storybook
@@ -88,8 +89,6 @@ It would fit to the solutions online about how to generate payslips and can exte
 ## Assumption in App Design
 
 
-
-
 ### Assume user will use the app on different screen.
 So the app should be responseive. supporting different resolution
 
@@ -129,7 +128,6 @@ The snap shot will be committed in source control.
 ## Future work
 ### Responsive page test 
 It should be done by do mounting the app, given the context of different resolution. It is an assumption now, once defined in requirement, it should be implmenetd.
-
 
 
 ## Known Issuees
