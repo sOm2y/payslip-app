@@ -1,5 +1,54 @@
 # Payslip app
 
+Hello there, thanks for the visit. please take your time to surf the app here: [Demo](https://klauszhang.github.io/payslip-demo/)
+
+If you want to see the source code. please open the terimal/powershell, and type followings:
+```
+git clone https://github.com/klauszhang/payslip-app
+cd payslip-app
+```
+
+then install dependencies (suppose you have npm/yarn installed)
+```
+npm install
+or 
+yarn install
+```
+
+then start the app
+
+```
+npm start
+or 
+yarn start
+```
+
+if you are interested in test
+```
+npm test
+or 
+yarn test
+```
+
+Test coverage? no problem!
+```
+npm test -- --coverage
+or
+yarn test --coverage
+```
+
+
+How about component view? I knew you would ask
+```
+npm run storybook
+or
+yarn storybook
+```
+
+What else? feel free to contact me! 
+
+
+
 ## Assumuptions
 
 ## Assumption in Requirements
@@ -38,8 +87,6 @@ When input is October, it means October of 2018.
 It would fit to the solutions online about how to generate payslips and can extended in future.
 
 ## Assumption in App Design
-
-
 
 
 ### Assume user will use the app on different screen.
@@ -83,15 +130,10 @@ The snap shot will be committed in source control.
 It should be done by do mounting the app, given the context of different resolution. It is an assumption now, once defined in requirement, it should be implmenetd.
 
 
-
 ## Known Issuees
 
 1. Snap shot testing is current an issue for jss
 https://github.com/cssinjs/react-jss/issues/93
 To tackle it, we can put css to be inline, or try another approach (render style along with html elements).
 
-2. We are using flow for type check in javascript. But some library we are currently using seems have some sorts of error in the flow defination that keep producing errors. I am pretty sure that will do no harm but it really annoying. Hopefully that will be fixed soon. It looks like below:
-```
-This type is incompatible with empty
-```
-issue tracking: https://github.com/callemall/material-ui/issues/9002
+2. We are using flow for type check in javascript. But some library we are currently using seems have some sorts of error in the flow defination that keep producing errors. I am pretty sure that will do no harm but it really annoying. Hopefully that will be fixed soon. It looks like:`This type is incompatible with empty`. issue tracking: https://github.com/callemall/material-ui/issues/9002
