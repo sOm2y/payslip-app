@@ -13,7 +13,7 @@ describe('payslipCalculator', () => {
       lastname: 'Rudd',
       annualSalary: 60050,
       superRate: 0.09,
-      paymentStartDate: '01 March - 31 March'
+      paymentStartDate: '2'
     };
     const result = payslipCalculator(input);
 
@@ -21,7 +21,7 @@ describe('payslipCalculator', () => {
       isInvalid: false,
       value: {
         name: `${input.firstname} ${input.lastname}`,
-        payPeriod: input.paymentStartDate,
+        payPeriod: '1st March - 31st March, 2018',
         grossIncome: 5004,
         incomeTax: 922,
         netIncome: 4082,
@@ -36,7 +36,7 @@ describe('payslipCalculator', () => {
       lastname: 'Chen',
       annualSalary: 120000,
       superRate: 0.1,
-      paymentStartDate: '01 March - 31 March'
+      paymentStartDate: '2'
     };
     const result = payslipCalculator(input);
 
@@ -44,7 +44,7 @@ describe('payslipCalculator', () => {
       isInvalid: false,
       value: {
         name: `${input.firstname} ${input.lastname}`,
-        payPeriod: input.paymentStartDate,
+        payPeriod: '1st March - 31st March, 2018',
         grossIncome: 10000,
         incomeTax: 2696,
         netIncome: 7304,
@@ -59,7 +59,7 @@ describe('payslipCalculator', () => {
       lastname: 'Chen',
       annualSalary: 120000,
       superRate: -0.1,
-      paymentStartDate: '01 March - 31 March'
+      paymentStartDate: '3'
     };
 
     const result = payslipCalculator(input);

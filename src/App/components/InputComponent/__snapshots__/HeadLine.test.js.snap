@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Actions should match snapshot 1`] = `
+<div
+  style={
+    Object {
+      "height": 50,
+    }
+  }
+>
+  <h1
+    className="MuiTypography-root-1 MuiTypography-headline-6"
+    id="title"
+  >
+    Please input your detail
+  </h1>
+</div>
+`;

@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContainer should match snapshot of hide result 1`] = `
+<div
+  className="AppContainer-container-1"
+>
+  <div
+    className="AppContainer-ribbon-2"
+  >
+    <div
+      className="AppContainer-headlineWrapper-5"
+    >
+      <img
+        alt="myob"
+        className="AppContainer-logo-6"
+        src="logo.svg"
+      />
+      <div
+        className="AppContainer-separator-3"
+      />
+      <p
+        className="MuiTypography-root-11 MuiTypography-body1-20 MuiTypography-colorInherit-30"
+      >
+        Payslip App
+      </p>
+    </div>
+  </div>
+  <div
+    className="AppContainer-childrenWrapper-4"
+  >
+    <div
+      className="MuiGrid-typeContainer-35 MuiGrid-spacing-xs-16-55"
+    >
+      <div
+        className="MuiGrid-typeItem-36 MuiGrid-grid-xs-12-70 MuiGrid-grid-sm-12-83 MuiGrid-grid-lg-4-101 AppContainer-input-9"
+      >
+        <div>
+          foo
+        </div>
+      </div>
+      <div
+        className="MuiGrid-typeItem-36 MuiGrid-grid-xs-12-70 MuiGrid-grid-sm-6-77 MuiGrid-grid-lg-4-101 AppContainer-result-10"
+        style={
+          Object {
+            "opacity": "0",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "height": 48,
+              "width": undefined,
+            }
+          }
+        />
+        <div>
+          bar
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="MuiTypography-root-11 MuiTypography-caption-21 AppContainer-bottom-7"
+  >
+    © Hao 2017, for MYOB, logo belongs to MYOB
+     
+  </span>
+</div>
+`;
+
+exports[`AppContainer should match snapshot of show result 1`] = `"<div class=\\"AppContainer-container-1\\"><div class=\\"AppContainer-ribbon-2\\"><div class=\\"AppContainer-headlineWrapper-5\\"><img src=\\"logo.svg\\" alt=\\"myob\\" class=\\"AppContainer-logo-6\\"/><div class=\\"AppContainer-separator-3\\"></div><p class=\\"MuiTypography-root-11 MuiTypography-body1-20 MuiTypography-colorInherit-30\\">Payslip App</p></div></div><div class=\\"AppContainer-childrenWrapper-4\\"><div class=\\"MuiGrid-typeContainer-35 MuiGrid-spacing-xs-16-55\\"><div class=\\"MuiGrid-typeItem-36 MuiGrid-grid-xs-12-70 MuiGrid-grid-sm-6-77 MuiGrid-grid-lg-4-101 AppContainer-result-10\\" style=\\"opacity:0\\"><div>bar</div></div></div></div><span class=\\"MuiTypography-root-11 MuiTypography-caption-21 AppContainer-bottom-7\\">© Hao 2017, for MYOB, logo belongs to MYOB </span></div>"`;

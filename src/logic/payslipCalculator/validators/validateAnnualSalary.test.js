@@ -1,7 +1,7 @@
 //@flow
 
 import { shouldAlwaysPositive as validateGrossIncome } from './validateAnnualSalary';
-import { SHOULD_POSITIVE } from './validateAnnualSalary.message';
+import { SHOULD_POSITIVE, EMPTY_VALUE } from './validateAnnualSalary.message';
 
 describe('validateGrossIncome', () => {
   it('should return falsely when input is negative', () => {
@@ -25,5 +25,11 @@ describe('validateGrossIncome', () => {
 
     expect(result.isInvalid).toBe(true);
     expect(result.reason).toBe(SHOULD_POSITIVE);
+  });
+
+  it('should response falsy when input is NaN/null/undefined', () => {
+    expect(validateGrossIncome(null).reason).toBe(EMPTY_VALUE);
+    expect(validateGrossIncome(NaN).reason).toBe(EMPTY_VALUE);
+    expect(validateGrossIncome(undefined).reason).toBe(EMPTY_VALUE);
   });
 });
