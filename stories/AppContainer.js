@@ -7,17 +7,18 @@ import Paper from 'material-ui/Paper';
 import AppContainer from '../src/App/components/AppContainer';
 
 export default () => (
-  <AppContainer>
-    <Paper
-      style={{
-        height: 500,
-        width: 400,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}
-    >
-      a huge paper
-    </Paper>
-  </AppContainer>
+  <AppContainer
+    input={
+      <Paper style={{ height: 460, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        a huge paper
+      </Paper>
+    }
+    result={
+      <Paper
+        style={{ height: 320, width: '100%', flexGrow: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        a huge paper
+      </Paper>
+    }
+  />
 );
