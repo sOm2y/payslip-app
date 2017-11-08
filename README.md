@@ -1,12 +1,16 @@
 # Payslip app
 
-Hello there, thanks for the visit. please take your time to surf the app here: [Demo](https://klauszhang.github.io/payslip-demo/)
+Hello there, thanks for visiting. please take your time to surf the app here: [Demo](https://klauszhang.github.io/payslip-demo/)
 
-If you want to see the source code. please open the terimal/powershell, and type followings:
+Please not all code writing in **Function Programing** style. Emphasis on **immutability** and **descriptivity**. Most side effects are isolated into its minimal scope and most functions are pure.
+
+If you want to see the source code, consider you have got git, please open the terimal/powershell, and type followings:
 ```
 git clone https://github.com/klauszhang/payslip-app
 cd payslip-app
 ```
+
+If git is NOT installed, please click the button on the right side corner, `Clone or Download` -> `Download ZIP` then unzip it.
 
 then install dependencies (suppose you have npm/yarn installed)
 ```
