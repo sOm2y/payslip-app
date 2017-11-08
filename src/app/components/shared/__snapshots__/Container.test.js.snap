@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container should match snapshot 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-shadow2-6 MuiPaper-rounded-3 Container-container-1"
+>
+  hello
+</div>
+`;
