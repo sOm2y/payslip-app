@@ -1,0 +1,447 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Actions should match snapshot 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-shadow2-6 MuiPaper-rounded-3 Container-container-1"
+>
+  <div
+    style={
+      Object {
+        "height": 50,
+      }
+    }
+  >
+    <h1
+      className="MuiTypography-root-29 MuiTypography-headline-34"
+      id="title"
+    >
+      Please input your detail
+    </h1>
+  </div>
+  <div
+    className="MuiGrid-typeContainer-53 MuiGrid-spacing-xs-16-73"
+    id="input-area"
+  >
+    <div
+      className="MuiGrid-typeItem-54 MuiGrid-grid-xs-12-88"
+    >
+      <div
+        className="MuiFormControl-root-141"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        required={false}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-151 MuiInputLabel-root-145 MuiInputLabel-formControl-146 MuiInputLabel-animated-149"
+          data-shrink={false}
+        >
+          First Name
+        </label>
+        <div
+          className="MuiInput-root-155 MuiInput-formControl-156 MuiInput-inkbar-157 MuiInput-underline-163"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <input
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="MuiInput-input-159 MuiInput-inputSingleline-166"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={undefined}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-typeItem-54 MuiGrid-grid-xs-12-88"
+    >
+      <div
+        className="MuiFormControl-root-141"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        required={false}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-151 MuiInputLabel-root-145 MuiInputLabel-formControl-146 MuiInputLabel-animated-149"
+          data-shrink={false}
+        >
+          Last Name
+        </label>
+        <div
+          className="MuiInput-root-155 MuiInput-formControl-156 MuiInput-inkbar-157 MuiInput-underline-163"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <input
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="MuiInput-input-159 MuiInput-inputSingleline-166"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            name={undefined}
+            onChange={[Function]}
+            onKeyDown={undefined}
+            onKeyUp={undefined}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={undefined}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-typeItem-54 MuiGrid-grid-xs-12-88 MuiGrid-grid-md-8-110"
+    >
+      <div
+        className="MuiFormControl-root-141"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        required={false}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-151 MuiInputLabel-root-145 MuiInputLabel-formControl-146 MuiInputLabel-animated-149 MuiInputLabel-shrink-148"
+          data-shrink={true}
+        >
+          Annual Salary
+        </label>
+        <div
+          className="MuiInput-root-155 MuiInput-formControl-156 MuiInput-inkbar-157 MuiInput-underline-163"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <div
+            className="MuiInputAdornment-root-170 MuiInputAdornment-positionStart-171"
+          >
+            <p
+              className="MuiTypography-root-29 MuiTypography-body1-38 MuiTypography-colorSecondary-50"
+            >
+              $
+            </p>
+          </div>
+          <input
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="MuiInput-input-159 MuiInput-inputSingleline-166"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            name={undefined}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={undefined}
+            onMouseUp={[Function]}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={undefined}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-typeItem-54 MuiGrid-grid-xs-12-88 MuiGrid-grid-md-4-106"
+    >
+      <div
+        className="MuiFormControl-root-141"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        required={false}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="MuiFormLabel-root-151 MuiInputLabel-root-145 MuiInputLabel-formControl-146 MuiInputLabel-animated-149"
+          data-shrink={false}
+        >
+          Super Rate
+        </label>
+        <div
+          className="MuiInput-root-155 MuiInput-formControl-156 MuiInput-inkbar-157 MuiInput-underline-163"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <input
+            autoComplete={undefined}
+            autoFocus={undefined}
+            className="MuiInput-input-159 MuiInput-inputSingleline-166"
+            defaultValue={undefined}
+            disabled={false}
+            id={undefined}
+            name={undefined}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={undefined}
+            onMouseUp={[Function]}
+            placeholder={undefined}
+            readOnly={undefined}
+            required={undefined}
+            rows={undefined}
+            type="text"
+            value=""
+          />
+          <div
+            className="MuiInputAdornment-root-170 MuiInputAdornment-positionEnd-172"
+          >
+            <p
+              className="MuiTypography-root-29 MuiTypography-body1-38 MuiTypography-colorSecondary-50"
+            >
+              %
+            </p>
+          </div>
+        </div>
+        <p
+          className="MuiFormHelperText-root-173"
+        >
+          between 0 and 50
+        </p>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-typeItem-54 MuiGrid-grid-xs-12-88"
+    >
+      <div
+        className="MuiFormControl-root-141"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        required={false}
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="MuiFormControl-root-141 MuiFormControl-marginNormal-142"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          required={false}
+        >
+          <label
+            className="MuiFormLabel-root-151 MuiInputLabel-root-145 MuiInputLabel-formControl-146 MuiInputLabel-animated-149"
+            data-shrink={false}
+            htmlFor={undefined}
+          >
+            Payment Start Date
+          </label>
+          <div
+            className="MuiInput-root-155 MuiInput-formControl-156 MuiInput-inkbar-157 MuiInput-underline-163"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="MuiSelect-root-177"
+            >
+              <select
+                autoComplete={undefined}
+                autoFocus={undefined}
+                className="MuiSelect-select-178 MuiInput-input-159 MuiInput-inputSingleline-166"
+                defaultValue={undefined}
+                disabled={false}
+                id={undefined}
+                name={undefined}
+                onBlur={undefined}
+                onChange={[Function]}
+                onFocus={undefined}
+                onKeyDown={undefined}
+                onKeyUp={undefined}
+                placeholder={undefined}
+                readOnly={undefined}
+                required={undefined}
+                rows={undefined}
+                type="text"
+                value=""
+              >
+                <option
+                  value={-1}
+                >
+                   
+                </option>
+                <option
+                  value="10"
+                >
+                  1st November - 30th November, 2017
+                </option>
+                <option
+                  value="11"
+                >
+                  1st December - 31st December, 2017
+                </option>
+                <option
+                  value="0"
+                >
+                  1st January - 31st January, 2018
+                </option>
+                <option
+                  value="1"
+                >
+                  1st February - 28th February, 2018
+                </option>
+                <option
+                  value="2"
+                >
+                  1st March - 31st March, 2018
+                </option>
+                <option
+                  value="3"
+                >
+                  1st April - 30th April, 2018
+                </option>
+                <option
+                  value="4"
+                >
+                  1st May - 31st May, 2018
+                </option>
+                <option
+                  value="5"
+                >
+                  1st June - 30th June, 2018
+                </option>
+                <option
+                  value="6"
+                >
+                  1st July - 31st July, 2018
+                </option>
+                <option
+                  value="7"
+                >
+                  1st August - 31st August, 2018
+                </option>
+                <option
+                  value="8"
+                >
+                  1st September - 30th September, 2018
+                </option>
+                <option
+                  value="9"
+                >
+                  1st October - 31st October, 2018
+                </option>
+              </select>
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-182 MuiSelect-icon-181"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "height": 72,
+        "width": undefined,
+      }
+    }
+  />
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <button
+      className="MuiButtonBase-root-197 MuiButton-root-183 btn_reset"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label-185"
+      >
+        Reset
+      </span>
+      <span
+        className="MuiTouchRipple-root-199"
+      />
+    </button>
+    <button
+      className="MuiButtonBase-root-197 MuiButton-root-183 MuiButton-raised-190 MuiButton-raisedPrimary-192 btn_ok"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label-185"
+      >
+        Ok
+      </span>
+      <span
+        className="MuiTouchRipple-root-199"
+      />
+    </button>
+  </div>
+</div>
+`;
